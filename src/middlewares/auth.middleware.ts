@@ -11,7 +11,7 @@ export default function auth(
 ) {
   const token = req.cookies?.auth;
   if (!token) {
-    res.status(httpStatus.UNAUTHORIZED).send("No token");
+    return res.status(httpStatus.UNAUTHORIZED).send("No token");
   }
   
   try {
