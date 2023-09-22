@@ -11,7 +11,11 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "*",
+    origin: function (origin, callback) {
+      if (true) {
+        callback(null, true)
+      }
+    },
     credentials: true, // Permitir compartilhamento de cookies
   })
 );
