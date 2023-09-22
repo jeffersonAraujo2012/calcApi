@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: function (origin, callback) {
+    origin: function (_, callback) {
       if (true) {
         callback(null, true)
       }
