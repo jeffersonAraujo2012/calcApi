@@ -8,6 +8,7 @@ Trata-se de uma simples calculadora.
 - **Express**
 - **JWT**
 - **Joi**
+- **Docker e docker compose**
 
 ## Iniciando localmente
 
