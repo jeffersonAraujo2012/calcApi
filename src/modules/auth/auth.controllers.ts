@@ -5,7 +5,6 @@ import httpStatus from "http-status";
 
 export async function signin(req: Request, res: Response) {
   const user = req.body as UserSigninDTO;
-  console.log(req.cookies);
   try {
     const token = await authServices.signin(user);
     return res.status(httpStatus.OK).cookie('auth', token, {
