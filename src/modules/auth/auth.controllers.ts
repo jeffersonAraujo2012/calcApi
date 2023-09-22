@@ -14,6 +14,9 @@ export async function signin(req: Request, res: Response) {
     }).send('Login bem sucedido');
   } catch (error) {
     console.log(error);
+    if (error.name === 'UnauthorizedError') {
+      return res.status(httpStatus.UNAUTHORIZED).send(error.message);
+    }
     return res.sendStatus(httpStatus.INTERNAL_SERVER_ERROR);
   }
 }
